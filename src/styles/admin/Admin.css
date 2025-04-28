@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+.wrapper-admin {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins, sans-serif;
+  padding: 2rem 2rem 6rem 2rem;
+  overflow-x: hidden;
+
+  table td,
+  tr {
+    color: black;
+  }
+
+  input {
+    color: black;
+  }
+}
+
+.detailModal {
+  max-height: 750px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.addModalContainer {
+  position: fixed; /* Change to fixed for better positioning */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 10; /* Ensure it's on top */
+}
+
+/* Modal Form */
+.addModalForm {
+  background: white; /* White background for the form */
+  padding: 20px;
+  min-width: 50%;
+  max-width: 90%; /* Max width to ensure it doesn't get too large */
+  max-height: 90vh; /* Max height to ensure it doesn't exceed the viewport */
+  overflow-y: auto; /* Vertical scroll if content overflows */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  border-radius: 8px; /* Rounded corners */
+  position: relative; /* Relative positioning for the close button */
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  font-size: 30px;
+  right: 10px;
+  color: black;
+  cursor: pointer;
+  z-index: 11; /* Ensure it's above other content */
+}
+
+.addModalContainer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.addModalForm {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 900px !important;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Modern & Majestic Table Styles */
+table.modern-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px; /* Adds space between rows */
+}
+
+table.modern-table tbody tr {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+table.modern-table tbody tr:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+table.modern-table tbody td {
+  padding: 12px 16px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  border: none;
+  position: relative;
+}
+
+/* Optional: Remove the right divider on the last cell */
+table.modern-table tbody td:last-child::after {
+  display: none;
+}
+
+.btn-eye {
+  background: linear-gradient(135deg, #214440, #0579fd);
+  color: white;
+  padding: 0.4rem 0.65rem;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-eye:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-create {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #3410ff, #1b6bff);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-create:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.inputContainer > .form-control {
+  width: 100%;
+}
+
+.inputRow {
+  flex: 1 1 1;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.admin-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background: #3867ff;
+  background-clip: text !important;
+  font-size: 30px;
+  color: transparent !important;
+}
+
+.action-btn {
+  background: linear-gradient(to right, #03c966, #0acf4c);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #1b3b36; /* Darken the button on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 14px !important;
+  margin-bottom: 3px;
+  background: linear-gradient(to right, #081ddd, #08aa3e) !important;
+  background-clip: text !important;
+  color: transparent !important;
+  font-family: "Poppins", "sans-serif";
+}
+
+.form-control {
+  padding: 8px 12px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(202, 200, 200);
+  transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #93c5fd; /* Change border color on focus */
+  padding-left: 15px;
+  box-shadow: 0 0 3px rgb(13, 49, 255);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  min-width: 60px;
+  font-family: Poppins, "sans-serif";
+  font-weight: 300;
+  color: white;
+  padding: 20px 12px;
+  position: relative;
+  white-space: nowrap;
+  text-align: center;
+}
+
+table tr {
+  border-bottom: 1px solid rgb(209, 206, 206);
+}
+
+table td {
+  font-family: Poppins, "sans-serif";
+  font-size: 0.8rem;
+  white-space: nowrap;
+  padding: 10px 15px;
+  text-align: center;
+  position: relative;
+}
+
+table th::after,
+table td::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background-color: #cbc8c8be;
+}
+
+/* Remove the border from the last cell and header in each row */
+table th:last-child::after,
+table td:last-child::after {
+  display: none;
+}
+
+/* Add rounded corners to the first and last header */
+table th:first-child {
+  border-top-left-radius: 15px;
+}
+
+table th:last-child {
+  border-top-right-radius: 15px;
+}
+
+.id {
+  min-width: 15px;
+}
+
+.experience-item,
+.certification-item {
+  transition: background-color 0.2s ease;
+}
+
+.experience-item:hover,
+.certification-item:hover {
+  background-color: #f8f9fa;
+}
+
+.add-experience button,
+.certification-input button {
+  transition: opacity 0.2s ease;
+}
+
+.add-experience button:disabled,
+.certification-input button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+  .form-label {
+    font-size: 16px;
+  }
+}
